@@ -14,7 +14,8 @@ int main() {
                               auto resp = HttpResponse::newHttpResponse();
                               //THIS CONNECTION WORKING FINE :-
                               //auto db = DbClient::newPgClient("postgres://milthncaegivda:81a187b80654ed43bb093cecaeba9397999dc754b8dbfa9cc5b861f82f48afb7@ec2-52-202-152-4.compute-1.amazonaws.com:5432/d80qgv501kv1q9",2);
-                              auto db = app().getFastDbClient();
+                              //note that we shouldn't use a sync interface of a FastDbClient;
+                              auto db = app().getDbClient();
                               auto res = db->execSqlSync("select * from test");
                               if (res.affectedRows())
                                   resp->setBody(res[0]["id"].as<string>());
