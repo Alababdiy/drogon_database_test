@@ -35,7 +35,7 @@
                 //["MinProtocol", "TLSv1.3"]
             ]
         }
-    ],
+    ],*/
     "db_clients": [
         {
             //name: Name of the client,'default' by default
@@ -67,7 +67,7 @@
             //zero or negative value means no timeout.
             "timeout": -1.0
         }
-    ],
+    ],/*
     "redis_clients": [
         {
             //name: Name of the client,'default' by default
